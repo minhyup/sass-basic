@@ -1,0 +1,63 @@
+// IR
+@mixin hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin position($x, $y) {
+  position: absolute;
+  left: $x;
+  top: $y;
+  @if $x == 50% and $y == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $x == 50% {
+    transform: translateX(-50%);
+  } @else if $y == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+@mixin bg($img, $x: null, $y: null, $color: null, $w: null, $h: null) {
+  background: url(#{$imgBaseUrl}#{$img}) no-repeat $x $y $color;
+  background-size: $w $h;
+}
+
+@mixin ellipsis($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+@function rem($px, $base: 10) {
+  $sum: calc(($px / $base) * 1rem);
+
+  @return $sum;
+}
+
+$mobile: 960px;
+$tablet: 1024px;
+
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: calc($mobile + 1)) and (max-width: $tablet) {
+    @content;
+  }
+}

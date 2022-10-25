@@ -1,0 +1,18 @@
+%header-btn {
+  width: rem(44);
+  height: rem(44);
+}
+.btn {
+  &-prev {
+    @extend %header-btn;
+    @include bg("icon_prev.svg", center, center);
+  }
+  &-search {
+    @extend %header-btn;
+    @include bg("icon_search.svg", center, center);
+  }
+  &-menu {
+    @extend %header-btn;
+    @include bg("icon_menu.svg", center, center);
+  }
+}

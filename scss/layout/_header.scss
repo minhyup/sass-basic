@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: $primary1;
+  height: rem(44);
+  h1 {
+    @include position(50%, 50%);
+    @include typo16();
+
+    color: $white;
+  }
+}

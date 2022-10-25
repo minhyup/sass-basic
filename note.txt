@@ -1,0 +1,48 @@
+/abstracts
+프로젝트 전체에 사용되는 변수, 믹스인, 함수, 플레이스 홀더 등을 배치한다
+_variables.scss
+_mixins.scss
+
+
+/base
+reset, normalize, font정의 등 HTML요소의 표준 스타일을 배치한다.
+_reset.scss
+_typography.scss
+
+
+
+/vendors
+프로젝트에 사용하는 외부 스타일을 배치한다.
+_swiper.scss
+
+
+
+/layout
+사이트 구조에 해당하는 레이아웃인 gnb, header, footer 등을 정의하여 배치한다.
+_navigation.scss
+_footer.scss
+_header.scss
+
+
+/components
+작은 구성요소로 재사용이 가능한 코드 집합체이다.
+_alert.scss
+_button.scss
+_label.scss
+_modal.scss
+_infobox.scss
+_popup.scss
+_table.scss
+_heading.scss
+
+/pages
+컴포넌트로 표현하지 못한 각기 다른 페이지의 구체적인 스타일을 배치한다.
+_product.scss
+_login.scss
+_sign.scss
+
+
+/themes
+웹 서비스 사용자에 따라 적용하는 레이아웃 또는 다크모드와 같은 접근성에 따라 배치한다.
+_dark.scss
+_light.scss
