@@ -1,0 +1,44 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15.56px;
+  box-sizing: border-box;
+  background-color: $primary3;
+  height: rem(108);
+  border-top: 2px solid $primary1;
+
+  padding: rem(31) 0 rem(32.44);
+
+  color: #fff;
+
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+
+    li {
+      position: relative;
+    }
+    li:not(:last-of-type):after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      right: -12px;
+
+      background: #ffffff;
+      opacity: 0.2;
+    }
+  }
+}

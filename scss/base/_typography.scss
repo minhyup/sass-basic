@@ -11,6 +11,27 @@ body {
   font-size: 1rem;
 }
 
+@mixin typo10() {
+  font-size: rem(10);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+@mixin typo12() {
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+@mixin typo14() {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
 @mixin typo16() {
   font-size: rem(16);
   font-weight: 700;

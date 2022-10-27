@@ -1,6 +1,53 @@
 .category {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
   box-sizing: border-box;
   height: rem(57);
-  background-color: red;
+  background-color: $bg-color2;
   border-bottom: 1px solid $line1;
+  padding: 0 rem(15) 0 rem(16);
+
+  @include typo14();
+
+  &__depth {
+    a {
+      color: inherit;
+    }
+    display: flex;
+    gap: rem(22);
+    align-items: center;
+    position: relative;
+    top: 2px;
+    color: $text-dark;
+
+    &-item {
+      position: relative;
+
+      &:not(:last-of-type):after {
+        @include bg("icon_category_arrow.svg", center, center);
+
+        content: "";
+        position: absolute;
+        left: calc(100% + 8px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 11px;
+      }
+    }
+    &-item--select {
+      color: $primary1;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+
+    .btn-sort {
+      position: relative;
+      top: 2px;
+    }
+  }
 }
