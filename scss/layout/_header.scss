@@ -10,4 +10,12 @@
 
     color: $white;
   }
+
+  &.white {
+    border-bottom: 1px solid $blued8;
+    background-color: $white;
+    h1 {
+      color: $grey21;
+    }
+  }
 }

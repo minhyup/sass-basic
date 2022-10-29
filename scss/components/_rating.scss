@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+  gap: 4px;
+  font-size: rem(14);
+  line-height: 1;
+  color: $grey21;
+
+  span {
+    $rating_height: 14;
+
+    @include bg("icon_rating.svg");
+
+    width: rem(78);
+    height: rem($rating_height);
+
+    @for $i from 1 to 6 {
+      &.rate#{$i} {
+        $sum: calc($rating_height * $i);
+        background-position: 0 rem(-$sum);
+      }
+    }
+  }
+}

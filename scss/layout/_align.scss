@@ -1,0 +1,23 @@
+.align {
+  display: flex;
+  &.both {
+    justify-content: space-between;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.vm {
+    align-items: center;
+  }
+  &.bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: $white;
+  }
+}

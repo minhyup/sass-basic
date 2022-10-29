@@ -1,4 +1,19 @@
-footer {
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: rem(32) 0;
+  background-color: $grey66;
+  text-align: center;
+  color: $white;
+  font-size: rem(11);
+  line-height: rem(13);
+  border-top: 2px solid $blued8;
+  margin-top: rem(48);
+}
+
+.footer2 {
   display: flex;
   flex-direction: column;
   gap: 15.56px;

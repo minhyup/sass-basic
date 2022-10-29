@@ -47,6 +47,108 @@
   @return $sum;
 }
 
+// 구분선 리스트
+// 여백, 선, 배경영부, 가로, 세로, 배경색 또는 이미지
+@mixin bar($margin, $method, $w: null, $h: null, $c: null) {
+  display: flex;
+  > li {
+    display: flex;
+    align-items: center;
+
+    + li {
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 rem($margin);
+        @if $method == "l" or $method == "line" {
+          width: rem($w);
+          height: rem($h);
+          background-color: $c;
+        } @else if $method == "bg" or $method == "background" {
+          width: rem($w);
+          height: rem($h);
+          @include bg(#{$c});
+        }
+      }
+    }
+  }
+}
+// 버튼 크기
+@each $size, $pad, $h, $fs in $btnsize {
+  .btn.#{$size} {
+    padding: 0 rem($pad);
+    height: rem($h);
+    border: 1px solid;
+    border-radius: rem(8);
+    font-size: rem($fs);
+    box-sizing: border-box;
+  }
+}
+
+// 모서리 둥근
+@each $radius in $btnra {
+  .badge.r#{$radius},
+  .btn.r#{$radius} {
+    border-radius: rem($radius);
+  }
+}
+
+// 버튼 색상
+@each $cls, $c, $bc, $tc in $btncolor {
+  .btn.#{$cls} {
+    background-color: $c;
+    border-color: $bc;
+    color: $tc;
+  }
+}
+
+// 버튼 아이콘
+@each $i, $dir, $w, $h, $bg, $margin in $btnico {
+  .btn.ico#{$i} {
+    @if $dir == "before" or $dir == "b" {
+      &:before {
+        content: "";
+        width: rem($w);
+        height: rem($h);
+        margin-right: rem($margin);
+        @include bg(#{$bg});
+      }
+    } @else if $dir == "after" or $dir == "a" {
+      &:after {
+        content: "";
+        width: rem($w);
+        height: rem($h);
+        margin-left: rem($margin);
+        @include bg(#{$bg});
+      }
+    }
+  }
+}
+
+// 뱃지 색상
+@each $cls, $br, $bg, $fc in $badgecolor {
+  .badge.grey {
+    border-color: $greyd7;
+  }
+  // .badge.#{$cls} {
+  //   border-color: $br;
+  //   background-color: $bg;
+  //   color: $fc;
+  // }
+}
+// 뱃지 크기
+@each $cls, $pad, $h, $fs in $badgesize {
+  // .badge.#{$cls} {
+  //   border: 1px solid;
+  //   box-sizing: border-box;
+  //   padding: 0 rem($pad);
+  //   height: rem($h);
+  //   font-size: rem($fs);
+  //   border-radius: rem(8);
+  // }
+}
+
+// 반응형
 $mobile: 960px;
 $tablet: 1024px;
 

@@ -1,0 +1,40 @@
+.list {
+  // 구분선 리스트
+  &-bar {
+    @include bar(12, "l", 1, 14, rgba($white, 0.2));
+    a {
+      color: $white;
+    }
+  }
+
+  // 화살표 구분
+  &-arrow {
+    @include bar(8, "bg", 16, 11, "icon_category_arrow.svg");
+
+    flex-wrap: wrap;
+    gap: rem(4) 0;
+    a {
+      color: $white;
+    }
+  }
+
+  // 기본 정보 표
+  &-info {
+    border-top: 1px solid $greyea;
+    font-size: rem(14);
+    line-height: 1;
+    > li {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $greyea;
+      padding: rem(16) 0;
+      // background: red;
+      > span {
+        width: rem(80);
+      }
+      > div {
+        flex: 1;
+      }
+    }
+  }
+}

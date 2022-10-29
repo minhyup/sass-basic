@@ -1,0 +1,15 @@
+.breadcrumb {
+  @include bar(8, bg, 6, 11, "icon_category_arrow.svg");
+
+  a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: $grey21;
+  }
+  &--active {
+    a {
+      color: $blued8;
+    }
+  }
+}

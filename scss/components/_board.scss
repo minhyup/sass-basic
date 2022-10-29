@@ -1,0 +1,146 @@
+.board {
+  // 게시판리스트 상단정보
+  &-info {
+    font-size: rem(16);
+    line-height: 1;
+    color: $grey21;
+  }
+
+  // 갤러리형 게시판
+  &-gallery {
+    a {
+      display: block;
+    }
+    &.line {
+      padding-top: rem(24);
+      border-top: 1px solid $grey99;
+    }
+
+    &__thumb {
+      img {
+        width: 100%;
+        min-height: rem(94);
+      }
+    }
+    &__category {
+      font-size: rem(10);
+      letter-spacing: -0.5px;
+      color: $grey33;
+    }
+    &__title {
+      font-size: rem(14);
+      line-height: 1;
+      letter-spacing: -0.5px;
+      color: $grey21;
+    }
+    &__info {
+      padding: rem(16);
+    }
+    &__badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(4);
+    }
+
+    // 갤러리형 보기
+    &.gallery {
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(8);
+        > li {
+          border-radius: rem(8);
+          border: 1px solid $greyea;
+          box-sizing: border-box;
+        }
+      }
+      &.col2 {
+        > ul > li {
+          width: calc(50% - rem(4));
+        }
+      }
+    }
+
+    // 리스트형보기
+    &.list {
+      a {
+        display: flex;
+      }
+      &.line {
+        > ul {
+          > li {
+            &:first-child {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+      .board-gallery {
+        &__thumb {
+          img {
+            width: rem(160);
+            height: rem(90);
+            border-radius: 8px;
+          }
+        }
+        &__info {
+          flex: 1;
+          padding: 0 0 0 rem(16);
+        }
+        &__title {
+          font-size: rem(16);
+        }
+      }
+      > ul {
+        > li {
+          padding: rem(16) 0;
+          + li {
+            border-top: 1px solid $greyea;
+          }
+        }
+      }
+    }
+
+    // 카드형 보기
+    &.card {
+      > ul {
+        > li {
+          border-radius: rem(8);
+          border: 1px solid $greyea;
+          box-sizing: border-box;
+          + li {
+            margin-top: rem(8);
+          }
+        }
+      }
+
+      .board-gallery {
+        &__thumb {
+          img {
+            min-height: rem(192);
+          }
+        }
+        &__title {
+          font-size: rem(16);
+        }
+      }
+    }
+  }
+
+  // 게시판보기
+  &-view {
+    .board-gallery {
+      &__thumb {
+        img {
+          min-height: rem(192);
+          border-radius: 8px;
+        }
+      }
+    }
+    &__title {
+      font-size: rem(20);
+      line-height: rem(28);
+      color: $grey21;
+    }
+  }
+}

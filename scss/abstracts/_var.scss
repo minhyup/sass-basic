@@ -1,3 +1,29 @@
 @import "./palette";
 
 $imgBaseUrl: "../images/";
+
+// 버튼크기
+// $size(클래스명), $pad, $h, $fs
+$btnsize: "xxsmall" 12 34 14, "xsmall" 8 40 12, "small" 29 48 14,
+  "regular" 30 60 16;
+
+// 모서리 둥근
+$btnra: 0, 4, 20;
+
+// 버튼 색상
+// $cls, $c, $bc, $tc
+$btncolor: "white" $white $grey99 $grey21, "blue" $blued8 $blued8 $white,
+  "lightgrey" $greyf5 $grey99 $grey4b;
+
+// 버튼 아이콘
+$btnico: 1 after 16 16 "icon_scrap.svg" 8, 2 after 16 16 "icon_study.svg" 9,
+  3 after 14 16 "icon_category_filter.svg" 8;
+
+// 뱃지 색상
+// $cls, $br, $bg, $fc
+$badgecolor: "grey" $greyd7 $greyfa $grey4b;
+//"grey" $greyd7 $greyfa $grey4b;
+
+// 뱃지 크기
+// $cls, $pad, $h, $fs
+$badgesize: "small" 5 20 10;

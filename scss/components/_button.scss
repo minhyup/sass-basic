@@ -17,9 +17,21 @@
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.full {
+    width: 100%;
+  }
+
   &-prev {
     @extend %header-btn;
     @include bg("icon_prev.svg", center, center);
+
+    &.blue {
+      @include bg("icon_prev_blue.svg", center, center);
+    }
   }
   &-search {
     @extend %header-btn;

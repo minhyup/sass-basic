@@ -1,0 +1,22 @@
+.main2 {
+  padding: 0 rem(15);
+}
+.category {
+  padding: 0 rem(15);
+  border-bottom: 1px solid $greyea;
+}
+
+.btn-group {
+  width: 100%;
+  gap: 4px;
+  padding: rem(20) rem(16) rem(24);
+  display: flex;
+  > button {
+    &:first-child {
+      // width: rem(104);
+    }
+    &:last-child {
+      flex: 1;
+    }
+  }
+}

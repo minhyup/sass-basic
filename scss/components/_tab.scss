@@ -1,0 +1,44 @@
+.tab {
+  // 게시판 보기 설정
+  &-sort {
+    display: flex;
+    gap: rem(2);
+    button {
+      width: rem(32);
+      height: rem(32);
+    }
+    @for $i from 1 to 4 {
+      li:nth-child(#{$i}) {
+        button {
+          @include bg("icon_category1_black.svg");
+
+          &:hover,
+          &.tab-sort--active {
+            @include bg("icon_category1_white.svg");
+          }
+        }
+      }
+    }
+  }
+
+  // 탭 디자인1
+  &-type1 {
+    display: flex;
+    > li {
+      flex: 1;
+    }
+    button {
+      width: 100%;
+      height: rem(42);
+      background-color: $white;
+      border-bottom: 2px solid $greyea;
+      font-size: rem(14);
+      color: $grey21;
+      &.tab-type1--active {
+        border-bottom-color: blue;
+        color: blue;
+        font-weight: 700;
+      }
+    }
+  }
+}

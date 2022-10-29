@@ -5,10 +5,20 @@
 
 @import "base/reset";
 @import "base/typography";
-@import "layout/header";
-@import "layout/contents";
-@import "layout/footer";
 @import "components/button";
 @import "components/category";
 @import "components/subtitle";
 @import "components/cardlist";
+@import "components/list";
+@import "components/breadcrumb";
+@import "components/board";
+@import "components/tab";
+@import "components/rating";
+@import "components/badge";
+
+@import "layout/header";
+@import "layout/contents";
+@import "layout/footer";
+@import "layout/space";
+@import "layout/align";
+@import "pages/sub";
